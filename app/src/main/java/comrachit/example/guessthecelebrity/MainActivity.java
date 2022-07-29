@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -35,12 +39,61 @@ public class MainActivity extends AppCompatActivity {
     String[] answers=new String[4];
     Button b0,b1,b2,b3;
 
-    public void celebChosen(View view){
+    public void celebChosen(final View view){
 
         if(view.getTag().toString().equals(Integer.toString(locationOfCorrwectAns))){
+//            AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
+//            alphaAnimation.setDuration(300);
+//            alphaAnimation.setRepeatCount(1);
+//            alphaAnimation.setRepeatMode(Animation.REVERSE);
+//
+//            view.setAnimation(alphaAnimation);
+//
+//            alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
+//                @Override
+//                public void onAnimationStart(Animation animation) {
+////                    view.setTextColor(Color.GREEN);
+//                    view.setBackgroundColor(Color.GREEN);
+//                }
+//
+//                @Override
+//                public void onAnimationEnd(Animation animation) {
+////                    view.setTextColor(Color.WHITE);
+//                    view.setBackgroundColor(Color.WHITE);
+//                }
+//
+//                @Override
+//                public void onAnimationRepeat(Animation animation) {
+//
+//                }
+//            });
+
             Toast.makeText(getApplicationContext(),"Correct ! ",Toast.LENGTH_SHORT).show();
 
         }else{
+//            Animation shake = AnimationUtils.loadAnimation(MainActivity.this,
+//                    R.anim.shake_animation);
+//            view.setAnimation(shake);
+//
+//            shake.setAnimationListener(new Animation.AnimationListener() {
+//                @Override
+//                public void onAnimationStart(Animation animation) {
+////                    view.setTextColor(Color.RED);
+//                    view.setBackgroundColor(Color.RED);
+//
+//                }
+//
+//                @Override
+//                public void onAnimationEnd(Animation animation) {
+////                    view.setTextColor(Color.WHITE);
+//                    view.setBackgroundColor(Color.WHITE);
+//                }
+//
+//                @Override
+//                public void onAnimationRepeat(Animation animation) {
+//
+//                }
+//            });
             Toast.makeText(getApplicationContext(),"Wrong! It was : "+celebNames.get(chosenCeleb),Toast.LENGTH_SHORT).show();
         }
         createNewQuest();

@@ -8,4 +8,21 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="buttonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@drawable/roundstyle</item>
+        <item name="android:backgroundTint">#253455</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:elevation">12dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:shadowColor">#51545A</item>
+        <item name="android:tag">0</item>
+        <item name="android:textColor">#40A69D</item>
+    </style>
+
 </resources>
