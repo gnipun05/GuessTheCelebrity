@@ -88,17 +88,6 @@ public class MainActivity extends AppCompatActivity {
                 url=new URL(urls[0]);
                 urlConnection= (HttpURLConnection) url.openConnection();
                 InputStream in = urlConnection.getInputStream();
-              /*  InputStreamReader reader= new InputStreamReader(in);
-
-                int data=reader.read();
-
-                while(data != -1){
-
-                    char current =(char)data;
-
-                    result.append(current);
-
-                    data=reader.read();     */
                 BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
                 String line = reader.readLine();
@@ -117,10 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
                 return "Failed";
             }
-
-
-
-
         }
     }
 
@@ -162,12 +147,6 @@ public class MainActivity extends AppCompatActivity {
                 //System.out.println(m.group(1));
             }
 
-
-
-
-
-           //Log.i("  Contents of URL  ",result);
-
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -175,8 +154,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         createNewQuest();
-
-
     }
 
     public void createNewQuest(){
@@ -191,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
             celebImage=imageTask.execute(celebURLs.get(chosenCeleb)).get();
 
             imageView.setImageBitmap(celebImage);
-
 
             locationOfCorrwectAns=random.nextInt(4);
 
@@ -219,9 +195,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-
     }
 }
